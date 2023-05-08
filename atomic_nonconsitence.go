@@ -5,6 +5,8 @@ import (
 	"time"
 )
 
+
+// when run online, the address of managerImpl.hitcount is changed while call atomic add every time, and load it in other routine value is zero
 var managerOnce *sync.Once = new(sync.Once)
 var managerInstance manager
 
